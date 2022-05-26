@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d495be84089385b4f8fa0e6551d64a67, type: 3}
   m_Name: ShuttlePart1
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 4092149922374855522, guid: da46a5674925c5c43b7cd964429b8287, type: 3}
   type: 1
   description: This is description for the shuttle part that I will be displaying
     somewhere in inventory, idgaf tbh

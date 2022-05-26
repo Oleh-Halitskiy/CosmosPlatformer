@@ -22,8 +22,10 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private Component[] graphicSprites;
     [SerializeField] private ParticleSystem jumpParticles;
     [SerializeField] private GameObject pauseMenu;
-    public RecoveryCounter recoveryCounter;
+    [SerializeField] private GameObject InventoryMenu;
     public Inventory PlayerInventory;
+    public RecoveryCounter recoveryCounter;
+   
     // Singleton instantiation
     private static NewPlayer instance;
     public static NewPlayer Instance
@@ -138,7 +140,18 @@ public class NewPlayer : PhysicsObject
                 animator.SetTrigger("attack");
                 Shoot(false);
             }
-
+            if(Input.GetKeyDown(KeyCode.Tab))
+            {
+                if (InventoryMenu.activeInHierarchy != true)
+                {
+                    InventoryMenu.SetActive(true);
+                }
+                else
+                {
+                    InventoryMenu.SetActive(false);
+                }
+            }
+            
             //Secondary attack (currently shooting) with right click
             if (Input.GetMouseButtonDown(1))
             {

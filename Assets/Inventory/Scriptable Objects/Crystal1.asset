@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 485fe59589d904447b8ddffc7ce5e8db, type: 3}
   m_Name: Crystal1
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 8209636970755824589, guid: 059540e5fc6363c4bb55af6fa5574574, type: 3}
   type: 0
   description: I don't know whether we would have many crystals types or only one,
     like previous description idgaf tbh
+  recieveIfSold: 0
