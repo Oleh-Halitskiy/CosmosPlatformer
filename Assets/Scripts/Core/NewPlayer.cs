@@ -23,7 +23,7 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private ParticleSystem jumpParticles;
     [SerializeField] private GameObject pauseMenu;
     public RecoveryCounter recoveryCounter;
-
+    public Inventory PlayerInventory;
     // Singleton instantiation
     private static NewPlayer instance;
     public static NewPlayer Instance
