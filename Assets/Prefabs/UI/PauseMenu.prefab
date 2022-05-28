@@ -814,3 +814,4 @@ MonoBehaviour:
   pressSound: {fileID: 8300000, guid: 0b9ead35480c34b73aa5ac9d276aeddc, type: 3}
   openSound: {fileID: 8300000, guid: 40f4e6a7e4d364fbc83c390a768855cc, type: 3}
   pauseMenu: {fileID: 0}
+  inventory: []

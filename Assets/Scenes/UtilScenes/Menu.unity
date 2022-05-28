@@ -699,6 +699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whichScene: CutScene1
+  testInv: {fileID: 11400000, guid: b22d998698919fe409c0eccb860c4c36, type: 2}
 --- !u!1 &1428702186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,8 +1143,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1285968901}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: QuitGame
+        m_TargetAssemblyTypeName: MenuHandler, Assembly-CSharp
+        m_MethodName: LoadLastSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
