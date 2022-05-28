@@ -27,6 +27,11 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        if (!PlayerPrefs.HasKey("CompletedLevels"))
+        {
+            PlayerPrefs.SetInt("CompletedLevels", 0);
+        }
+        Debug.Log($"completed levels {PlayerPrefs.GetInt("CompletedLevels")}");
         audioSource = GetComponent<AudioSource>();
     }
 
