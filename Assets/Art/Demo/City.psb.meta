@@ -104,8 +104,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 875
-      y: 7973
+      x: 7745
+      y: 5112
       width: 62
       height: 62
     spriteID: 19e329e826487b24f889daaa144db13f
@@ -117,7 +117,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -2733, y: 7085}
+    uvTransform: {x: 4137, y: 4224}
   - name: Foreground1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -167,8 +167,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1469
-      y: 7161
+      x: 7200
+      y: 5112
       width: 537
       height: 216
     spriteID: 48885c85fe1e5d74d8c66cca25959890
@@ -180,7 +180,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1072, y: 6351}
+    uvTransform: {x: 6803, y: 4302}
   - name: Ground2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -202,6 +202,48 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: -2725, y: 5088}
+  - name: platform 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4852
+      y: 5112
+      width: 2340
+      height: 474
+    spriteID: 63c1b29581c136140af4c0ed02fd754d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3582, y: 5044}
+  - name: platform
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4852
+      y: 5594
+      width: 2340
+      height: 474
+    spriteID: 18b01906ebcc22d4187b915a045159d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4732, y: 5543}
   - name: Ground1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -375,7 +417,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 19e329e826487b24f889daaa144db13f
     layerID: 31
-    mosaicPosition: {x: 875, y: 7973}
+    mosaicPosition: {x: 7745, y: 5112}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -405,7 +447,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 48885c85fe1e5d74d8c66cca25959890
     layerID: 33
-    mosaicPosition: {x: 1469, y: 7161}
+    mosaicPosition: {x: 7200, y: 5112}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -416,6 +458,26 @@ ScriptedImporter:
     spriteID: fab635893d994cf449fca8c07d18427d
     layerID: 5
     mosaicPosition: {x: 4, y: 5112}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: platform 2
+    spriteName: platform 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 63c1b29581c136140af4c0ed02fd754d
+    layerID: 38
+    mosaicPosition: {x: 4852, y: 5112}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: platform
+    spriteName: platform
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 18b01906ebcc22d4187b915a045159d9
+    layerID: 35
+    mosaicPosition: {x: 4852, y: 5594}
     flatten: 0
     isImported: 1
     isVisible: 1
