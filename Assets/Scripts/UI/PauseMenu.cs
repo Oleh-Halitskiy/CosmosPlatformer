@@ -44,9 +44,14 @@ public class PauseMenu : MonoBehaviour
     {
         saveObject = new SaveObject();
         saveObject.InventorySave();
+        saveObject.AchievementsSave();
         string JsonSave = JsonUtility.ToJson(saveObject);
         File.WriteAllText(Application.dataPath + "/save.json", JsonSave);
         Debug.Log(JsonSave);
+    }
+    public void AchievementButton()
+    {
+        Debug.Log("You're now in new window");
     }
     private void Update()
     {

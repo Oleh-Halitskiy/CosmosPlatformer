@@ -7,6 +7,7 @@ public class MenuHandler : MonoBehaviour {
 
 	[SerializeField] private string whichScene;
     [SerializeField] Inventory testInv;
+    [SerializeField] private AchievementsManager achievementsManager;
     public void QuitGame()
     {
         Application.Quit();
@@ -20,10 +21,11 @@ public class MenuHandler : MonoBehaviour {
     {
         if(File.Exists(Application.dataPath + "/save.json"))
         {
-            string jsonSave = File.ReadAllText(Application.dataPath + "/save.json");
+             string jsonSave = File.ReadAllText(Application.dataPath + "/save.json");
              SaveObject saveObject = JsonUtility.FromJson<SaveObject>(jsonSave);
              testInv.Container = saveObject.inventory;
-            SceneManager.LoadScene(1);
+             achievementsManager.Achievements = saveObject.achievements;
+             SceneManager.LoadScene(1);
         }
 
     }
