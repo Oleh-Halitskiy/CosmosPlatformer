@@ -138,6 +138,7 @@ public class Achievement
         }
         if(RequirementsMet())
         {
+            EventManager.instance.AchievementCompleted(this);
             Debug.Log($"{Title}: {Description}");
             Achieved = true;
             PlayerPrefs.SetString(Title, "TRUE");

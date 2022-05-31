@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] AudioClip pressSound;
     [SerializeField] AudioClip openSound;
     [SerializeField] GameObject pauseMenu;
-    [SerializeField] public List<InventorySlot> inventory;
+    [SerializeField] private GameObject AchievementWindow;
     private SaveObject saveObject;
     // Use this for initialization
     void OnEnable()
@@ -51,7 +51,14 @@ public class PauseMenu : MonoBehaviour
     }
     public void AchievementButton()
     {
-        Debug.Log("You're now in new window");
+        if (AchievementWindow.activeInHierarchy)
+        {
+            AchievementWindow.SetActive(false);
+        }
+        else
+        {
+            AchievementWindow.SetActive(true);
+        }
     }
     private void Update()
     {
