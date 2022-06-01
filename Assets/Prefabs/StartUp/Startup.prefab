@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 627436519}
   - component: {fileID: 627436518}
   - component: {fileID: 627436520}
+  - component: {fileID: 7113145125069167298}
   m_Layer: 5
   m_Name: AchievementUnlocked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &627436517
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39,7 +40,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 39.324, y: 369}
+  m_AnchoredPosition: {x: 39.324, y: 661}
   m_SizeDelta: {x: -1408.472, y: -825.2045}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &627436519
@@ -94,6 +95,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: {fileID: 1316099433}
   _description: {fileID: 1864989394}
+--- !u!95 &7113145125069167298
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627436516}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ac6c7cfd65597404b9be03f8c2aeb23a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1316099431
 GameObject:
   m_ObjectHideFlags: 0
