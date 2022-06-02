@@ -49,8 +49,6 @@ public class Collectable : MonoBehaviour
             ItemGO itemGo = GetComponentInParent<ItemGO>();
             NewPlayer.Instance.PlayerInventory.AddItem(itemGo.item, 1);
             Debug.Log(NewPlayer.Instance.PlayerInventory.Container.Count);
-            //
-            //
            // NewPlayer.Instance.coins += itemAmount;
         }
         else if (itemType == ItemType.Health)

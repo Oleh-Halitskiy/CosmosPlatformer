@@ -69,25 +69,25 @@ public class AchievementsManager : MonoBehaviour
         if(Achievements != null)
             return;
         Achievements = new List<Achievement>();
-        Achievement achievement1 = new Achievement("First steps1", "Take your first step", (object o) => integer >= 100);
-        Achievement achievement2 = new Achievement("First steps2", "Take your first step2", (object o) => integer >= 150);
-        Achievement achievement3 = new Achievement("First steps3", "Take your first step3", (object o) => integer >= 200);
-        Achievement achievement4 = new Achievement("First steps4", "Take your first step3", (object o) => integer >= 300);
+        Achievement achievement1 = new Achievement("First steps I", "Travel on your first planet", (object o) => integer >= 100);
+        Achievement achievement2 = new Achievement("First steps II", "Travel on your second planet", (object o) => integer >= 150);
+        Achievement achievement3 = new Achievement("Killer I", "Kill 10 enemies", (object o) => integer >= 200);
+        Achievement achievement4 = new Achievement("Killer II", "Kill 25 enemies", (object o) => integer >= 300);
         //
-        Achievement achievement5 = new Achievement("First steps5", "Take your first step", (object o) => integer >= 400);
-        Achievement achievement6 = new Achievement("First steps6", "Take your first step2", (object o) => integer >= 500);
-        Achievement achievement7 = new Achievement("First steps7", "Take your first step3", (object o) => integer >= 600);
-        Achievement achievement8 = new Achievement("First steps8", "Take your first step3", (object o) => integer >= 700);
+        Achievement achievement5 = new Achievement("Uppercut I", "Hit enemy with uppercut 5 times", (object o) => integer >= 400);
+        Achievement achievement6 = new Achievement("Uppercut II", "Hit enemy with uppercut 10 times", (object o) => integer >= 500);
+        Achievement achievement7 = new Achievement("Jumper", "Jump 200 times", (object o) => integer >= 600);
+        Achievement achievement8 = new Achievement("Life Support - Online", "Construct Life Support", (object o) => integer >= 700);
         //
-        Achievement achievement9 = new Achievement("First steps9", "Take your first step", (object o) => integer >= 800);
-        Achievement achievement10 = new Achievement("First steps10", "Take your first step2", (object o) => integer >= 900);
-        Achievement achievement11 = new Achievement("First steps11", "Take your first step3", (object o) => integer >= 1000);
-        Achievement achievement12 = new Achievement("First steps12", "Take your first step3", (object o) => integer >= 1100);
+        Achievement achievement9 = new Achievement("HyperDrive - online", "Construct HyperDrive", (object o) => integer >= 800);
+        Achievement achievement10 = new Achievement("Shields - Online", "Construct Shields", (object o) => integer >= 900);
+        Achievement achievement11 = new Achievement("Communication System - Online", "Construct Communication System", (object o) => integer >= 1000);
+        Achievement achievement12 = new Achievement("Money maker I", "Collect 200 coins", (object o) => integer >= 1100);
         //
-        Achievement achievement13 = new Achievement("First steps13", "Take your first step", (object o) => integer >= 1200);
-        Achievement achievement14 = new Achievement("First steps14", "Take your first step2", (object o) => integer >= 1300);
-        Achievement achievement15 = new Achievement("First steps15", "Take your first step3", (object o) => integer >= 1400);
-        Achievement achievement16 = new Achievement("First steps16", "Take your first step3", (object o) => integer >= 1500);
+        Achievement achievement13 = new Achievement("Money maker II", "Collect 200 coins", (object o) => integer >= 1200);
+        Achievement achievement14 = new Achievement("Almost there", "Complete 3 of 5 missions", (object o) => integer >= 1300);
+        Achievement achievement15 = new Achievement("Dead man", "Die 5 times", (object o) => integer >= 1400);
+        Achievement achievement16 = new Achievement("Sub-light Engines - Online", "Construct Sub-light engines", (object o) => integer >= 1500);
         ///
         Achievements.Add(achievement1);
         Achievements.Add(achievement2);

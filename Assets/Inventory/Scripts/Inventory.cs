@@ -14,16 +14,25 @@ public class Inventory : ScriptableObject
                 if (Container[i].item == item)
                 {
                     Container[i].AddAmount(amount);
-                    Debug.Log("you had this item");
                     hasItem = true;
                     break;
                 }
             }
             if(!hasItem)
             {
-                 Debug.Log("new slot cretaed");
                  Container.Add(new InventorySlot(item, amount));
             }
+    }
+    public void RemoveItem(Item item, int amount)
+    {
+        for (int i = 0; i < Container.Count; i++)
+        {
+            if (Container[i].item == item)
+            {
+                Container[i].RemoveAmount(amount);
+                break;
+            }
+        }
     }
 }
 [System.Serializable]
@@ -39,5 +48,12 @@ public class InventorySlot
     public void AddAmount(int value)
     {
         amount += value;
+    }
+    public void RemoveAmount(int value)
+    {
+        if (amount > 0)
+        {
+            amount -= value;
+        }
     }
 }
