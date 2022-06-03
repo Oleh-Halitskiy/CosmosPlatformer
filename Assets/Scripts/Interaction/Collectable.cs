@@ -16,6 +16,7 @@ public class Collectable : MonoBehaviour
     [SerializeField] private string itemName; //If an inventory item, what is its name?
     [SerializeField] private Sprite UIImage; //What image will be displayed if we collect an inventory item?
     private int MoneyCount;
+    private int AddScore = 10;
 
     void Start()
     {
@@ -54,6 +55,8 @@ public class Collectable : MonoBehaviour
             {
                 PlayerPrefs.SetInt("MoneyCount", ++MoneyCount);
             }
+            AddScore += PlayerPrefs.GetInt("CurrentScore", 0);
+            PlayerPrefs.SetInt("CurrentScore", AddScore);   
            // NewPlayer.Instance.coins += itemAmount;
         }
         else if (itemType == ItemTypeCol.Health)

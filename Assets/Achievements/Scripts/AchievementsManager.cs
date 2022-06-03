@@ -5,7 +5,6 @@ using System;
 public class AchievementsManager : MonoBehaviour
 {
     public List<Achievement> Achievements;
-    public int integer;
     private void Awake()
     {
         InitAchievements();
@@ -16,12 +15,7 @@ public class AchievementsManager : MonoBehaviour
     }
     private void Update()
     {
-        DebugAchieve();
         CheckCompltetion();
-        if(Input.GetKeyDown(KeyCode.O))
-        {
-            AchievementUnlocked("First steps1");
-        }
     }
     private static AchievementsManager instance;
     public static AchievementsManager Instance
@@ -68,8 +62,8 @@ public class AchievementsManager : MonoBehaviour
         if(Achievements != null)
             return;
         Achievements = new List<Achievement>();
-        Achievement achievement1 = new Achievement("First steps I", "Travel on your first planet", (object o) => NewPlayer.Instance.FirstSteps1 == true);
-        Achievement achievement2 = new Achievement("First steps II", "Travel on your second planet", (object o) => NewPlayer.Instance.FirstSteps2 == true);
+        Achievement achievement1 = new Achievement("First steps I", "Travel on your first planet", (object o) => PlayerPrefs.GetInt("FirstSteps1", 0) >= 1);
+        Achievement achievement2 = new Achievement("First steps II", "Travel on your second planet", (object o) => PlayerPrefs.GetInt("FirstSteps2", 0) >= 1);
         Achievement achievement3 = new Achievement("Killer I", "Kill 10 enemies", (object o) => PlayerPrefs.GetInt("KillerCount",0) == 10);
         Achievement achievement4 = new Achievement("Killer II", "Kill 25 enemies", (object o) => PlayerPrefs.GetInt("KillerCount",0) == 25);
         //
@@ -115,6 +109,7 @@ public class Achievement
     public string Description;
     public Predicate<object> Requirement;
     public bool Achieved;
+    private int AddScore = 10;
     public Achievement(string title, string description, Predicate<object> requirement)
     {
         Title = title;
@@ -137,6 +132,8 @@ public class Achievement
         }
         if(RequirementsMet())
         {
+            AddScore += PlayerPrefs.GetInt("CurrentScore", 0);
+            PlayerPrefs.SetInt("CurrentScore", AddScore);
             EventManager.instance.AchievementCompleted(this);
             Debug.Log($"{Title}: {Description}");
             Achieved = true;

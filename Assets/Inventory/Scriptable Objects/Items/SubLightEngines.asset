@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6267671009177533974, guid: 25dbbd8f66d153d4bae5b25af7666f4b, type: 3}
   type: 1
-  description: 
+  description: SLE

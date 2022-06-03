@@ -22,6 +22,7 @@ public class EnemyBase : MonoBehaviour
     public bool isBomb;
     [SerializeField] bool requirePoundAttack; //Requires the player to use the down attack to hurt
     private int KillerCount;
+    private int AddScore = 10;
 
     void Start()
     {
@@ -92,7 +93,9 @@ public class EnemyBase : MonoBehaviour
         {
             NewPlayer.Instance.PoundEffect();
         }
-        PlayerPrefs.SetInt("KillerCount", ++KillerCount);  
+        PlayerPrefs.SetInt("KillerCount", ++KillerCount);
+        AddScore += PlayerPrefs.GetInt("CurrentScore", 0);
+        PlayerPrefs.SetInt("CurrentScore", AddScore);
         NewPlayer.Instance.cameraEffects.Shake(200, 1);
         health = 0;
         deathParticles.SetActive(true);

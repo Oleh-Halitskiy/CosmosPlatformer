@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4092149922374855522, guid: da46a5674925c5c43b7cd964429b8287, type: 3}
   type: 1
-  description: This is description for the shuttle part that I will be displaying
-    somewhere in inventory, idgaf tbh
+  description: HD
