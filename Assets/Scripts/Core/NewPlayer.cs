@@ -15,6 +15,7 @@ public class NewPlayer : PhysicsObject
     private AnimatorFunctions animatorFunctions;
     public GameObject attackHit;
     private CapsuleCollider2D capsuleCollider;
+    private int UpperCutCount;
     public CameraEffects cameraEffects;
     [SerializeField] private ParticleSystem deathParticles;
     [SerializeField] private AudioSource flameParticlesAudioSource;
@@ -25,7 +26,10 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private GameObject InventoryMenu;
     public Inventory PlayerInventory;
     public RecoveryCounter recoveryCounter;
-   
+    [Header("Achievements")]
+    public bool FirstSteps1;
+    public bool FirstSteps2;
+
     // Singleton instantiation
     private static NewPlayer instance;
     public static NewPlayer Instance
@@ -51,6 +55,8 @@ public class NewPlayer : PhysicsObject
     public float maxSpeed = 7; //Max move speed
     public float jumpPower = 17;
     private bool jumping;
+    private int JumpCount;
+    private int DeathCount;
     private Vector3 origLocalScale;
     [System.NonSerialized] public bool pounded;
     [System.NonSerialized] public bool pounding;
@@ -288,6 +294,7 @@ public class NewPlayer : PhysicsObject
         if (!frozen)
         {
             dead = true;
+            PlayerPrefs.SetInt("DeathCount", ++DeathCount);
             deathParticles.Emit(10);
             GameManager.Instance.audioSource.PlayOneShot(deathSound);
             Hide(true);
@@ -323,6 +330,7 @@ public class NewPlayer : PhysicsObject
             PlayStepSound();
             JumpEffect();
             jumping = true;
+            PlayerPrefs.SetInt("JumpCount", ++JumpCount);
         }
     }
 
@@ -437,7 +445,10 @@ public class NewPlayer : PhysicsObject
             }
         }
     }
-
+    public void UpperCutUsed()
+    {
+        PlayerPrefs.SetInt("UpperCount", ++UpperCutCount);  
+    }
     public void SetUpCheatItems()
     {
         //Allows us to get various items immediately after hitting play, allowing for testing. 

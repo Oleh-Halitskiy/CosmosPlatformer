@@ -21,6 +21,7 @@ public class EnemyBase : MonoBehaviour
     public AudioClip hitSound;
     public bool isBomb;
     [SerializeField] bool requirePoundAttack; //Requires the player to use the down attack to hurt
+    private int KillerCount;
 
     void Start()
     {
@@ -91,7 +92,7 @@ public class EnemyBase : MonoBehaviour
         {
             NewPlayer.Instance.PoundEffect();
         }
-
+        PlayerPrefs.SetInt("KillerCount", ++KillerCount);  
         NewPlayer.Instance.cameraEffects.Shake(200, 1);
         health = 0;
         deathParticles.SetActive(true);

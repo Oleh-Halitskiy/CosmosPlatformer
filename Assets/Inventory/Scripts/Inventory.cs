@@ -21,6 +21,22 @@ public class Inventory : ScriptableObject
             if(!hasItem)
             {
                  Container.Add(new InventorySlot(item, amount));
+                 if(item.description == "SLE")
+                 {
+                    PlayerPrefs.SetInt("SLE", 1);
+                 }
+                 else if(item.description == "CS")
+                 {
+                    PlayerPrefs.SetInt("CS", 1);
+                 }
+                 else if(item.description == "S")
+                 {
+                    PlayerPrefs.SetInt("S", 1);
+                 }
+                 else if (item.description == "LS")
+                 {
+                    PlayerPrefs.SetInt("LS", 1);
+                 }
             }
     }
     public void RemoveItem(Item item, int amount)

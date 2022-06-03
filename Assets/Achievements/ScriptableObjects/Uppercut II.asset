@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be3304325e7c7443823a1aed779ff51, type: 3}
   m_Name: Uppercut II
   m_EditorClassIdentifier: 
-  Image: {fileID: 21300000, guid: d8dac03a1d8383942880d1b18dacc9c9, type: 3}
+  Image: {fileID: 21300000, guid: 935309271845a2e4597a3e3be28da261, type: 3}
   Title: Uppercut II
   Description: Hit enemy with uppercut 10 times
   Completed: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be3304325e7c7443823a1aed779ff51, type: 3}
   m_Name: Shields - Online
   m_EditorClassIdentifier: 
-  Image: {fileID: 21300000, guid: c9154e7d41466fa44987eba9b0872123, type: 3}
+  Image: {fileID: 21300000, guid: 4e26f73ca7e65b04b96f2cacb516fe74, type: 3}
   Title: Shields - Online
   Description: Construct Shields
   Completed: 0

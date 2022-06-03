@@ -6,7 +6,6 @@ public class AchievementsManager : MonoBehaviour
 {
     public List<Achievement> Achievements;
     public int integer;
-    public float floating;
     private void Awake()
     {
         InitAchievements();
@@ -69,25 +68,25 @@ public class AchievementsManager : MonoBehaviour
         if(Achievements != null)
             return;
         Achievements = new List<Achievement>();
-        Achievement achievement1 = new Achievement("First steps I", "Travel on your first planet", (object o) => integer >= 100);
-        Achievement achievement2 = new Achievement("First steps II", "Travel on your second planet", (object o) => integer >= 150);
-        Achievement achievement3 = new Achievement("Killer I", "Kill 10 enemies", (object o) => integer >= 200);
-        Achievement achievement4 = new Achievement("Killer II", "Kill 25 enemies", (object o) => integer >= 300);
+        Achievement achievement1 = new Achievement("First steps I", "Travel on your first planet", (object o) => NewPlayer.Instance.FirstSteps1 == true);
+        Achievement achievement2 = new Achievement("First steps II", "Travel on your second planet", (object o) => NewPlayer.Instance.FirstSteps2 == true);
+        Achievement achievement3 = new Achievement("Killer I", "Kill 10 enemies", (object o) => PlayerPrefs.GetInt("KillerCount",0) == 10);
+        Achievement achievement4 = new Achievement("Killer II", "Kill 25 enemies", (object o) => PlayerPrefs.GetInt("KillerCount",0) == 25);
         //
-        Achievement achievement5 = new Achievement("Uppercut I", "Hit enemy with uppercut 5 times", (object o) => integer >= 400);
-        Achievement achievement6 = new Achievement("Uppercut II", "Hit enemy with uppercut 10 times", (object o) => integer >= 500);
-        Achievement achievement7 = new Achievement("Jumper", "Jump 200 times", (object o) => integer >= 600);
-        Achievement achievement8 = new Achievement("Life Support - Online", "Construct Life Support", (object o) => integer >= 700);
+        Achievement achievement5 = new Achievement("Uppercut I", "Use uppercut 5 times", (object o) => PlayerPrefs.GetInt("UpperCount",0) >= 5);
+        Achievement achievement6 = new Achievement("Uppercut II", "Use uppercut 10 times", (object o) => PlayerPrefs.GetInt("UpperCount",0) >= 10);
+        Achievement achievement7 = new Achievement("Jumper", "Jump 200 times", (object o) => PlayerPrefs.GetInt("JumpCount", 0) >= 200);
+        Achievement achievement8 = new Achievement("Life Support - Online", "Construct Life Support", (object o) => PlayerPrefs.GetInt("LS", 0) == 1);
         //
-        Achievement achievement9 = new Achievement("HyperDrive - online", "Construct HyperDrive", (object o) => integer >= 800);
-        Achievement achievement10 = new Achievement("Shields - Online", "Construct Shields", (object o) => integer >= 900);
-        Achievement achievement11 = new Achievement("Communication System - Online", "Construct Communication System", (object o) => integer >= 1000);
-        Achievement achievement12 = new Achievement("Money maker I", "Collect 200 coins", (object o) => integer >= 1100);
+        Achievement achievement9 = new Achievement("HyperDrive - online", "Construct HyperDrive", (object o) => PlayerPrefs.GetInt("HD", 0) == 1);
+        Achievement achievement10 = new Achievement("Shields - Online", "Construct Shields", (object o) => PlayerPrefs.GetInt("S", 0) == 1);
+        Achievement achievement11 = new Achievement("Communication System - Online", "Construct Communication System", (object o) => PlayerPrefs.GetInt("CS", 0) == 1);
+        Achievement achievement12 = new Achievement("Money maker I", "Collect 200 coins", (object o) => PlayerPrefs.GetInt("MoneyCount",0) >= 200);
         //
-        Achievement achievement13 = new Achievement("Money maker II", "Collect 200 coins", (object o) => integer >= 1200);
-        Achievement achievement14 = new Achievement("Almost there", "Complete 3 of 5 missions", (object o) => integer >= 1300);
-        Achievement achievement15 = new Achievement("Dead man", "Die 5 times", (object o) => integer >= 1400);
-        Achievement achievement16 = new Achievement("Sub-light Engines - Online", "Construct Sub-light engines", (object o) => integer >= 1500);
+        Achievement achievement13 = new Achievement("Money maker II", "Collect 400 coins", (object o) => PlayerPrefs.GetInt("MoneyCount",0) >= 400);
+        Achievement achievement14 = new Achievement("Almost there", "Complete 3 of 5 missions", (object o) => PlayerPrefs.GetInt("CompletedLevels",0) >= 3);
+        Achievement achievement15 = new Achievement("Dead man", "Die 5 times", (object o) => PlayerPrefs.GetInt("DeathCount", 0) == 5);
+        Achievement achievement16 = new Achievement("Sub-light Engines - Online", "Construct Sub-light engines", (object o) => PlayerPrefs.GetInt("SLE", 0) == 1);
         ///
         Achievements.Add(achievement1);
         Achievements.Add(achievement2);

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be3304325e7c7443823a1aed779ff51, type: 3}
   m_Name: First steps II
   m_EditorClassIdentifier: 
-  Image: {fileID: 21300000, guid: d8dac03a1d8383942880d1b18dacc9c9, type: 3}
+  Image: {fileID: 21300000, guid: 522a1a9a1550f924ea37707cc5074993, type: 3}
   Title: First steps II
   Description: Travel on your second planet
   Completed: 0

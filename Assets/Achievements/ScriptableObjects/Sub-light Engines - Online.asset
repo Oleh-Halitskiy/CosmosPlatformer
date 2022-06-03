@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be3304325e7c7443823a1aed779ff51, type: 3}
   m_Name: Sub-light Engines - Online
   m_EditorClassIdentifier: 
-  Image: {fileID: 21300000, guid: d8dac03a1d8383942880d1b18dacc9c9, type: 3}
+  Image: {fileID: 21300000, guid: 2470c032a695b394289bfecdb91b8a26, type: 3}
   Title: Sub-light Engines - Online
   Description: Construct Sub-light engines
   Completed: 0
