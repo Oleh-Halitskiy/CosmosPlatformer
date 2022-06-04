@@ -287,8 +287,6 @@ public class NewPlayer : PhysicsObject
         yield return new WaitForSeconds(length);
         Time.timeScale = 1f;
     }
-
-
     public IEnumerator Die()
     {
         if (!frozen)

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd7d3ab041f2ced40977da0b89208a70, type: 3}
-  m_Name: Shop
+  m_Name: Shop 4
   m_EditorClassIdentifier: 
   Container:
   - item: {fileID: 11400000, guid: c2ad5545fd5ba144c94a86ab9508300b, type: 2}
     amount: 10
-  - item: {fileID: 11400000, guid: 80c4ba4d8e11e3446b0da8cd1cd81350, type: 2}
+  - item: {fileID: 11400000, guid: d5d74da5c8981c44c9b0c415feaeb758, type: 2}
     amount: 1

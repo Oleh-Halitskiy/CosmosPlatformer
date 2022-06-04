@@ -32,6 +32,9 @@ public class PauseMenu : MonoBehaviour
     public void Quit()
     {
         Time.timeScale = 1f;
+        PlayerPrefs.SetInt("CurrentScore",0);
+        PlayerPrefs.SetInt("CompletedLevels",0);
+        NewPlayer.Instance.PlayerInventory.Container.Clear();
         SceneManager.LoadScene("Menu");
     }
 
@@ -44,7 +47,6 @@ public class PauseMenu : MonoBehaviour
     {
         saveObject = new SaveObject();
         saveObject.InventorySave();
-        saveObject.AchievementsSave();
         string JsonSave = JsonUtility.ToJson(saveObject);
         File.WriteAllText(Application.dataPath + "/save.json", JsonSave);
         Debug.Log(JsonSave);

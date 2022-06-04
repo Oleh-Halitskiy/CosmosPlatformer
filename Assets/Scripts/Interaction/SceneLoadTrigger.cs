@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class SceneLoadTrigger : MonoBehaviour
 {
-    private int completedLevels;
+    private int completedLevels = 1;
     [SerializeField] string loadSceneName;
     private int AddScore = 100;
 

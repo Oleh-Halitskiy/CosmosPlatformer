@@ -15,7 +15,6 @@ public class ShopController : MonoBehaviour
     [SerializeField] private int ThirdPrice;
     [SerializeField] private int FourthPrice;
     [Header("Utils")]
-    [SerializeField] private Inventory shopInventory;
     [SerializeField] private GameObject shopPanel;
     private BoxCollider2D boxCollider;
     private Inventory playerInventory;

@@ -786,9 +786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70fa67dafa60a44f4afe0f404dcf5cf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whichScene: DemoLevel
+  whichScene: Level1
   testInv: {fileID: 11400000, guid: b22d998698919fe409c0eccb860c4c36, type: 2}
-  achievementsManager: {fileID: 0}
 --- !u!1 &1428702186
 GameObject:
   m_ObjectHideFlags: 0

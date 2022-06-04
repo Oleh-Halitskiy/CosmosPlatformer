@@ -7,7 +7,6 @@ public class MenuHandler : MonoBehaviour {
 
 	[SerializeField] private string whichScene;
     [SerializeField] Inventory testInv;
-    [SerializeField] private AchievementsManager achievementsManager;
     public void QuitGame()
     {
         Application.Quit();
@@ -24,8 +23,8 @@ public class MenuHandler : MonoBehaviour {
              string jsonSave = File.ReadAllText(Application.dataPath + "/save.json");
              SaveObject saveObject = JsonUtility.FromJson<SaveObject>(jsonSave);
              testInv.Container = saveObject.inventory;
-             achievementsManager.Achievements = saveObject.achievements;
-             SceneManager.LoadScene(1);
+             PlayerPrefs.SetInt("CurrentScore", saveObject.currentScore);
+             SceneManager.LoadScene(saveObject.completedLevels);
         }
 
     }

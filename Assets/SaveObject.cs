@@ -6,19 +6,15 @@ using UnityEngine;
 public class SaveObject
 {
     public int completedLevels;
-    public int test = 1;
     public List<InventorySlot> inventory;
-    public List<Achievement> achievements;
+    public int currentScore;
     public SaveObject()
     {
         completedLevels = PlayerPrefs.GetInt("CompletedLevels", 0);
+        currentScore = PlayerPrefs.GetInt("CurrentScore", 0);
     }
     public void InventorySave()
     {
         inventory = NewPlayer.Instance.PlayerInventory.Container;
-    }
-    public void AchievementsSave()
-    {
-        achievements = AchievementsManager.Instance.Achievements;
     }
 }
