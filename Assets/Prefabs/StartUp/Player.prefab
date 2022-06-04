@@ -422,6 +422,8 @@ MonoBehaviour:
   InventoryMenu: {fileID: 0}
   PlayerInventory: {fileID: 11400000, guid: b22d998698919fe409c0eccb860c4c36, type: 2}
   recoveryCounter: {fileID: 0}
+  FirstSteps1: 0
+  FirstSteps2: 0
   cheatItems: []
   dead: 0
   frozen: 0

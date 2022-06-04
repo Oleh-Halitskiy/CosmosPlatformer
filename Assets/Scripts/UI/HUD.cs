@@ -42,7 +42,7 @@ public class HUD : MonoBehaviour
     void Update()
     {
         //Update coins text mesh to reflect how many coins the player has! However, we want them to count up.
-        coinsMesh.text = Mathf.Round(coinsEased).ToString();
+        coinsMesh.text = PlayerPrefs.GetInt("CurrentScore", 0).ToString();
         coinsEased += ((float)NewPlayer.Instance.coins - coinsEased) * Time.deltaTime * 5f;
 
         if (coinsEased >= coins)

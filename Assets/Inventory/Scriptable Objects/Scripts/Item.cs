@@ -6,7 +6,11 @@ using UnityEngine;
 public enum ItemType
 {
     Crystal,
-    Parts
+    Parts,
+    Medkit,
+    Potion,
+    Coin
+
 }
 public abstract class Item : ScriptableObject
 {

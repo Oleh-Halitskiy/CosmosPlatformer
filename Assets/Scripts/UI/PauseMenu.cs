@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +11,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] AudioClip pressSound;
     [SerializeField] AudioClip openSound;
     [SerializeField] GameObject pauseMenu;
-
+    [SerializeField] private GameObject AchievementWindow;
+    private SaveObject saveObject;
     // Use this for initialization
     void OnEnable()
     {
@@ -38,4 +40,32 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    public void Save()
+    {
+        saveObject = new SaveObject();
+        saveObject.InventorySave();
+        saveObject.AchievementsSave();
+        string JsonSave = JsonUtility.ToJson(saveObject);
+        File.WriteAllText(Application.dataPath + "/save.json", JsonSave);
+        Debug.Log(JsonSave);
+    }
+    public void AchievementButton()
+    {
+        if (AchievementWindow.activeInHierarchy)
+        {
+            AchievementWindow.SetActive(false);
+        }
+        else
+        {
+            AchievementWindow.SetActive(true);
+        }
+    }
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Unpause();
+        }
+    }
 }
+

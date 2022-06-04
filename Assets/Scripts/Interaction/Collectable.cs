@@ -7,14 +7,16 @@ using UnityEngine;
 public class Collectable : MonoBehaviour
 {
 
-    enum ItemType { InventoryItem, Coin, Health, Ammo }; //Creates an ItemType category
-    [SerializeField] ItemType itemType; //Allows us to select what type of item the gameObject is in the inspector
+    enum ItemTypeCol { InventoryItem, Coin, Health, Ammo }; //Creates an ItemType category
+    [SerializeField] ItemTypeCol itemType; //Allows us to select what type of item the gameObject is in the inspector
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip bounceSound;
     [SerializeField] private AudioClip[] collectSounds;
     [SerializeField] private int itemAmount;
     [SerializeField] private string itemName; //If an inventory item, what is its name?
     [SerializeField] private Sprite UIImage; //What image will be displayed if we collect an inventory item?
+    private int MoneyCount;
+    private int AddScore = 10;
 
     void Start()
     {
@@ -37,23 +39,27 @@ public class Collectable : MonoBehaviour
 
     public void Collect()
     {
-        if (itemType == ItemType.InventoryItem)
+        if (itemType == ItemTypeCol.InventoryItem)
         {
             if (itemName != "")
             {
                 GameManager.Instance.GetInventoryItem(itemName, UIImage);
             }
         }
-        else if (itemType == ItemType.Coin)
+        else if (itemType == ItemTypeCol.Coin)
         {
             ItemGO itemGo = GetComponentInParent<ItemGO>();
             NewPlayer.Instance.PlayerInventory.AddItem(itemGo.item, 1);
             Debug.Log(NewPlayer.Instance.PlayerInventory.Container.Count);
-            //
-            //
+            if(itemGo.item.type == ItemType.Coin)
+            {
+                PlayerPrefs.SetInt("MoneyCount", ++MoneyCount);
+            }
+            AddScore += PlayerPrefs.GetInt("CurrentScore", 0);
+            PlayerPrefs.SetInt("CurrentScore", AddScore);   
            // NewPlayer.Instance.coins += itemAmount;
         }
-        else if (itemType == ItemType.Health)
+        else if (itemType == ItemTypeCol.Health)
         {
             if (NewPlayer.Instance.health < NewPlayer.Instance.maxHealth)
             {
@@ -61,7 +67,7 @@ public class Collectable : MonoBehaviour
                 NewPlayer.Instance.health += itemAmount;
             }
         }
-        else if (itemType == ItemType.Ammo)
+        else if (itemType == ItemTypeCol.Ammo)
         {
             if (NewPlayer.Instance.ammo < NewPlayer.Instance.maxAmmo)
             {
