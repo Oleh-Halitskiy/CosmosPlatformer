@@ -447,7 +447,8 @@ public class NewPlayer : PhysicsObject
     }
     public void UpperCutUsed()
     {
-        PlayerPrefs.SetInt("UpperCount", ++UpperCutCount);  
+        PlayerPrefs.SetInt("UpperCount", ++UpperCutCount);
+        Debug.Log("uppercut Used");
     }
     public void SetUpCheatItems()
     {

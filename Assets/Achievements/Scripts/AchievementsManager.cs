@@ -7,6 +7,7 @@ public class AchievementsManager : MonoBehaviour
     public List<Achievement> Achievements;
     private void Awake()
     {
+        
         InitAchievements();
     }
     private void Start()
@@ -15,6 +16,7 @@ public class AchievementsManager : MonoBehaviour
     }
     private void Update()
     {
+        DebugAchieve();
         CheckCompltetion();
     }
     private static AchievementsManager instance;
