@@ -16,6 +16,7 @@ public class NewPlayer : PhysicsObject
     public GameObject attackHit;
     private CapsuleCollider2D capsuleCollider;
     private int UpperCutCount;
+    private InventorySlot medKits;
     public CameraEffects cameraEffects;
     [SerializeField] private ParticleSystem deathParticles;
     [SerializeField] private AudioSource flameParticlesAudioSource;
@@ -87,6 +88,7 @@ public class NewPlayer : PhysicsObject
 
     void Start()
     {
+        Application.targetFrameRate = 60;
         Cursor.visible = false;
         SetUpCheatItems();
         health = maxHealth;
@@ -103,8 +105,39 @@ public class NewPlayer : PhysicsObject
     private void Update()
     {
         ComputeVelocity();
+        // inventory + medkit
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (InventoryMenu.activeInHierarchy != true)
+            {
+                InventoryMenu.SetActive(true);
+            }
+            else
+            {
+                InventoryMenu.SetActive(false);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            CheckMK();
+            if (NewPlayer.Instance.health < NewPlayer.Instance.maxHealth && medKits.amount > 0)
+            {
+                medKits.RemoveAmount(1);
+                GameManager.Instance.hud.HealthBarHurt();
+                NewPlayer.Instance.health += 1;
+            }
+        }
     }
-
+    private void CheckMK()
+    {
+        for (int i = 0; i < PlayerInventory.Container.Count; i++)
+        {
+            if (PlayerInventory.Container[i].item.type == ItemType.Medkit)
+            {
+                medKits = PlayerInventory.Container[i];
+            }
+        }
+    }
     protected void ComputeVelocity()
     {
         //Player movement & attack
@@ -146,18 +179,6 @@ public class NewPlayer : PhysicsObject
                 animator.SetTrigger("attack");
                 Shoot(false);
             }
-            if(Input.GetKeyDown(KeyCode.Tab))
-            {
-                if (InventoryMenu.activeInHierarchy != true)
-                {
-                    InventoryMenu.SetActive(true);
-                }
-                else
-                {
-                    InventoryMenu.SetActive(false);
-                }
-            }
-            
             //Secondary attack (currently shooting) with right click
             if (Input.GetMouseButtonDown(1))
             {

@@ -15,6 +15,7 @@ public class MenuHandler : MonoBehaviour {
     public void LoadScene()
     {
         SceneManager.LoadScene(whichScene);
+        testInv.Container.Clear();
     }
     public void LoadLastSave()
     {
