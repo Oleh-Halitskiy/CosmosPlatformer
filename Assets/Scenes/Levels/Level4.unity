@@ -1904,6 +1904,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 33.477215
       objectReference: {fileID: 0}
+    - target: {fileID: 528033150, guid: b022250573709434c9737ce47e1017e3, type: 3}
+      propertyPath: m_Color.a
+      value: 0.81960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 528033150, guid: b022250573709434c9737ce47e1017e3, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 528033150, guid: b022250573709434c9737ce47e1017e3, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 528033150, guid: b022250573709434c9737ce47e1017e3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1092067387, guid: b022250573709434c9737ce47e1017e3, type: 3}
       propertyPath: m_text
       value: 'Price: 5 crystals, press 2 to buy '
@@ -1955,6 +1971,11 @@ PrefabInstance:
     - target: {fileID: 4056615123376922, guid: b022250573709434c9737ce47e1017e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114057765296015656, guid: b022250573709434c9737ce47e1017e3,
+        type: 3}
+      propertyPath: m_text
+      value: SATURN
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b022250573709434c9737ce47e1017e3, type: 3}
