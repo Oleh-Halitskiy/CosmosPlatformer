@@ -6083,7 +6083,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sound
       value: 
-      objectReference: {fileID: 8300000, guid: 34ae96b3c92b44cebbdf3c3444d0204e, type: 3}
+      objectReference: {fileID: 8300000, guid: 186afc45ea938a94f989acc83cd38a03, type: 3}
     - target: {fileID: 114960326724290942, guid: 0f618da174ea44266865b50a04995f3c,
         type: 3}
       propertyPath: volume
@@ -9000,7 +9000,7 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 528033148, guid: b022250573709434c9737ce47e1017e3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 528033149, guid: b022250573709434c9737ce47e1017e3, type: 3}
       propertyPath: m_AnchorMax.y
