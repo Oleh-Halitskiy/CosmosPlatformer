@@ -37,7 +37,7 @@ public class AchievementsManager : MonoBehaviour
                 Debug.Log($"{achievement.Achieved} {achievement.Title}");
             }
         }
-        else if(Input.GetKey(KeyCode.L))
+        if(Input.GetKeyDown(KeyCode.L))
         {
             PlayerPrefs.DeleteAll();
         }
@@ -64,8 +64,8 @@ public class AchievementsManager : MonoBehaviour
         if(Achievements != null)
             return;
         Achievements = new List<Achievement>();
-        Achievement achievement1 = new Achievement("First steps I", "Travel on your first planet", (object o) => PlayerPrefs.GetInt("FirstSteps1", 0) >= 1);
-        Achievement achievement2 = new Achievement("First steps II", "Travel on your second planet", (object o) => PlayerPrefs.GetInt("FirstSteps2", 0) >= 1);
+        Achievement achievement1 = new Achievement("First steps I", "Travel on your first planet", (object o) => PlayerPrefs.GetInt("CompletedLevels", 0) >= 1);
+        Achievement achievement2 = new Achievement("First steps II", "Travel on your second planet", (object o) => PlayerPrefs.GetInt("FirstSteps2", 0) >= 2);
         Achievement achievement3 = new Achievement("Killer I", "Kill 10 enemies", (object o) => PlayerPrefs.GetInt("KillerCount",0) == 10);
         Achievement achievement4 = new Achievement("Killer II", "Kill 25 enemies", (object o) => PlayerPrefs.GetInt("KillerCount",0) == 25);
         //

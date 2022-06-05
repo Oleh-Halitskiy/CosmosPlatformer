@@ -11,6 +11,10 @@ public class EventManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
+    private void Start()
+    {
+        Screen.SetResolution(1920,1080, true);
+    }
     public event Action<Achievement> onAchievementComplete;
     public event Action<int> onPointsAdded;
     public void AchievementCompleted(Achievement ach)
