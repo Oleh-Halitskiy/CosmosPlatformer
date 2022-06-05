@@ -24,6 +24,7 @@ public class SceneLoadTrigger : MonoBehaviour
     }
     private void Start()
     {
-        completedLevels = PlayerPrefs.GetInt("CompletedLevels");
+        completedLevels = PlayerPrefs.GetInt("CompletedLevels", 1);
+        Debug.Log($"{completedLevels}, COMPLETED LEVELS");
     }
 }

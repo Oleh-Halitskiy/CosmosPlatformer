@@ -1694,6 +1694,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 291339946, guid: b022250573709434c9737ce47e1017e3, type: 3}
+      propertyPath: m_text
+      value: 'Price: 7 coins, press 1 to buy '
+      objectReference: {fileID: 0}
     - target: {fileID: 459084469, guid: b022250573709434c9737ce47e1017e3, type: 3}
       propertyPath: PlayerInventory
       value: 
@@ -1730,6 +1734,10 @@ PrefabInstance:
     - target: {fileID: 528033149, guid: b022250573709434c9737ce47e1017e3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 33.477215
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092067387, guid: b022250573709434c9737ce47e1017e3, type: 3}
+      propertyPath: m_text
+      value: 'Price: 5 crystals, press 2 to buy '
       objectReference: {fileID: 0}
     - target: {fileID: 1263890939840604, guid: b022250573709434c9737ce47e1017e3, type: 3}
       propertyPath: m_Name

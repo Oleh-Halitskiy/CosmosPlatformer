@@ -233,6 +233,34 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Price: 7 coins, press 1 to buy '
       objectReference: {fileID: 0}
+    - target: {fileID: 528033149, guid: b022250573709434c9737ce47e1017e3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 528033149, guid: b022250573709434c9737ce47e1017e3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 528033149, guid: b022250573709434c9737ce47e1017e3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 528033149, guid: b022250573709434c9737ce47e1017e3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 367.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 528033149, guid: b022250573709434c9737ce47e1017e3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 561.8077
+      objectReference: {fileID: 0}
+    - target: {fileID: 528033149, guid: b022250573709434c9737ce47e1017e3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -183.84998
+      objectReference: {fileID: 0}
+    - target: {fileID: 528033149, guid: b022250573709434c9737ce47e1017e3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 29.9794
+      objectReference: {fileID: 0}
     - target: {fileID: 1092067387, guid: b022250573709434c9737ce47e1017e3, type: 3}
       propertyPath: m_text
       value: 'Price: 5 crystals, press 2 to buy '

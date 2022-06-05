@@ -33,7 +33,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         PlayerPrefs.SetInt("CurrentScore",0);
-        PlayerPrefs.SetInt("CompletedLevels",0);
+        PlayerPrefs.SetInt("CompletedLevels",1);
         NewPlayer.Instance.PlayerInventory.Container.Clear();
         SceneManager.LoadScene("Menu");
     }

@@ -10,7 +10,7 @@ public class SaveObject
     public int currentScore;
     public SaveObject()
     {
-        completedLevels = PlayerPrefs.GetInt("CompletedLevels", 0);
+        completedLevels = PlayerPrefs.GetInt("CompletedLevels", 1);
         currentScore = PlayerPrefs.GetInt("CurrentScore", 0);
     }
     public void InventorySave()
