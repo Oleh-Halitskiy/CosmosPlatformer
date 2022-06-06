@@ -26,6 +26,8 @@ WASD - walk
 
 Tab – inventory 
 
+M - use med kit
+
 Space - jump
 
 LMB – punch
